@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/index.css">
+	<script src="https://kit.fontawesome.com/22613e50dc.js" crossorigin="anonymous"></script>
+        <title>Bee Creative</title>
+    </head>
+    <body>
+	
+	<div class = "app">
+	
+		<div id ="home">
+		<h1> What do you wish to draw?<i class="fa-solid fa-pencil"></i></h1>
+			<div id= "butt-center">
+				<button id = "comic-butt" type ="button" onclick = "controller.comic()"><i class="fa-solid fa-person"></i> Comic Characters</button>
+				<button id = "life-butt" type ="button" onclick = "controller.life()"><i class="fa-solid fa-tree"></i> Life Drawing</button>
+				<button id = "graphic-butt" type ="button" onclick = "controller.graphic()"><i class="fa-solid fa-shapes"></i> Graphic Design</button>
+			</div>
+		</div>
+
+		<div id = "activities">
+			<div id = "comic">
+				<h2 id = "comicActivity"></h2>
+			</div>
+
+			<div id = "life">
+				<h2 id = "lifeActivity"></h2>
+			</div>
+
+			<div id = "graphics">
+				<h2 id = "graphicsActivity"></h2>
+			</div>
+		</div>
+	
+		<div id ="home-butt">
+			<button  id = "hom" type = "button" onclick = "controller.home()"><i class="fa-solid fa-house"></i> Home</button>
+		</div>
+	
+		<div id = "drawButtons">
+			<label for= "photo-butt">Draw with a pencil on paper and take a photo</label>
+			<button  id= "photo-butt" type= "button" onclick = "controller.photo()"><i class ="fa-solid fa-camera"></i></button>	
+			<label for= "sketch-butt">Draw on the screen with your finger</label>
+			<button  id= "sketch-butt" type= "button" onclick = "controller.sketch()"><i class="fa-solid fa-palette"></i></button>
+			
+		</div>
+
+		<div id = "saveShareButtons">
+			<button id = "save-butt" type= "button" onclick = "controller.save()"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+			<button id = "share-butt" type= "button" onclick = "controller.share()"><i class="fa-solid fa-share"></i> Share</button>
+		</div>
+
+		<div id = "refresh">
+			<button id = "refresh-butt" type = "button" onClick = "controller.refresh()"><i class="fa-solid fa-arrows-rotate"></i></button>
+		</div>
+
+		<div id = "redoButtons">
+			<button id = "redoPhoto" type = "button" onClick = "controller.photo()">Redo <i class="fa-solid fa-camera"></i></button>
+			<button id = "redoSketch" type = "button" onClick = "controller.sketch()">Redo <i class="fa-solid fa-palette"></i></button>
+		</div>
+		
+		<div id = "imagePlaceHolder">
+    			<img id="image" style="max-height: 45vh; max-width: 100%; display: block; margin: 0.5rem auto" src="img/logo.png" alt = "Submitted drawing for the activity" >
+		</div>
+
+	</div>
+
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
